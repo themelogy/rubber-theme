@@ -1,0 +1,32 @@
+@extends('layouts.master')
+
+@section('breadcrumbs')
+    @component('partials.title', ['breadcrumb'=>'store.index'])
+        {{ trans('themes::store.products.titles.product') }}
+    @endcomponent
+@endsection
+
+@section('content')
+    <div class="gdlr-core-page-builder-body">
+        <div class="gdlr-core-pbf-sidebar-wrapper ">
+            <div class="gdlr-core-pbf-sidebar-container gdlr-core-line-height-0 clearfix gdlr-core-js gdlr-core-container">
+                <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-45 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-right" style="padding: 60px 0px 30px 30px;">
+                    <div class="gdlr-core-pbf-sidebar-content-inner">
+                        <div class="gdlr-core-portfolio-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+                            @forelse($products as $product)
+                                @include('store::partials.product')
+                            @empty
+                                @component('partials.components.alert-box', ['alert'=>'warning'])
+                                    @slot('title') {{ trans('themes::store.messages.products not found') }} @endslot
+                                @endcomponent
+                            @endforelse
+                        </div>
+                        {!! $products->render('partials.pagination') !!}
+                        @unset($products)
+                    </div>
+                </div>
+                @include('store::partials.sidebar')
+            </div>
+        </div>
+    </div>
+@endsection
