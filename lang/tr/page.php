@@ -1,7 +1,8 @@
 <?php
 
 return [
-  'title' => [
-      'homepage' => 'Anasayfa'
-  ]
+    'title' => [
+        'homepage'           => 'Anasayfa',
+        'introductory video' => 'Tanıtım Filmi'
+    ]
 ];
