@@ -29,3 +29,4 @@
         </div>
     </div>
 </footer>
+<a href="#" id="back-to-top" title="Back to top"><i class="fa fa-angle-up"></i></a>

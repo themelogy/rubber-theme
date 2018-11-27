@@ -4,6 +4,7 @@ return [
     'products' => [
         'titles' => [
             'brand'          => 'Marka',
+            'brands'         => 'Markalar',
             'product'        => 'Ürünler',
             'category'       => 'Kategori',
             'categories'     => 'Kategoriler',
@@ -13,7 +14,14 @@ return [
             'gyp'            => 'GYP Kodu',
             'original no'    => 'Orjinal No',
             'dimension'      => 'Ölçü',
-            'price'          => 'Fiyat'
+            'price'          => 'Fiyat',
+            'image'          => 'Resim',
+            'name'           => 'Adı',
+            'details'        => 'Detaylar'
+        ],
+        'search' => [
+            'title'        => 'Ürün Ara',
+            'find product' => ':query arama sonucunda :count ürün bulundu.'
         ]
     ],
     'product'  => [

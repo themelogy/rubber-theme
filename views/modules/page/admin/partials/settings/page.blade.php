@@ -38,7 +38,9 @@
     <fieldset>
         <legend>Video Ayarları</legend>
         <div class="col-md-12">
-            {!! Form::normalInput("settings[embed_video]", "Video", $errors, isset($page->settings->embed_video) ? $page->settings->embed_video : '') !!}
+            {!! Form::label("settings.embed_video", "Video") !!}
+            {!! Form::input('text', 'settings[embed_video]', !isset($page->settings->embed_video) ? '' : $page->settings->embed_video, ['class'=>'form-control']) !!}
+            {!! $errors->first("settings.embed_video", '<span class="help-block">:message</span>') !!}
         </div>
     </fieldset>
 </div>

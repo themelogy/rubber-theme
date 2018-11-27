@@ -44,7 +44,7 @@
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-blog-content">
-                                                {!! $post->body !!}
+                                                {!! $post->content !!}
                                             </div>
                                         </div>
                                     </div>

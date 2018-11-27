@@ -24,6 +24,7 @@ return [
     ],
     'buttons' => [
         'details' => 'Detaylı Bilgi',
-        'offer'   => 'Teklif Al'
+        'offer'   => 'Teklif Al',
+        'view'    => 'İncele'
     ]
 ];

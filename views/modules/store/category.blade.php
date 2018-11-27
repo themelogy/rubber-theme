@@ -2,7 +2,7 @@
 
 @section('breadcrumbs')
     @component('partials.title', ['breadcrumb'=>'store.category'])
-        {{ $category->name }}
+        {{ $category->title }}
     @endcomponent
 @endsection
 
@@ -13,13 +13,7 @@
                 <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-45 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-right" style="padding: 60px 0px 30px 30px;">
                     <div class="gdlr-core-pbf-sidebar-content-inner">
                         <div class="gdlr-core-portfolio-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
-                            @forelse($products as $product)
-                                @include('store::partials.product')
-                            @empty
-                                @component('partials.components.alert-box', ['alert'=>'warning'])
-                                    @slot('title') {{ trans('themes::store.messages.products not found') }} @endslot
-                                @endcomponent
-                            @endforelse
+                            @include('store::partials.product-row')
                         </div>
                     </div>
                     {!! $products->render('partials.pagination') !!}
