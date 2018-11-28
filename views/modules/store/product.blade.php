@@ -69,11 +69,19 @@
                                                 <td>{{ $product->sku }}</td>
                                             </tr>
                                             @endif
+                                            @isset($product->settings)
+                                                <tr>
+                                                    @foreach(array_keys((array)$product->settings) as $key)
+                                                        <th>{{ trans('themes::store.products.settings.'.$key) }}</th>
+                                                        <td>{{ $product->settings->{$key} }}</td>
+                                                    @endforeach
+                                                </tr>
+                                            @endisset
                                             @if($product->price > 0 || Auth::check())
-                                            <tr>
-                                                <th>{{ trans('themes::store.products.titles.price') }}</th>
-                                                <td>{{ $product->price }}</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>{{ trans('themes::store.products.titles.price') }}</th>
+                                                    <td>{{ $product->price }}</td>
+                                                </tr>
                                             @endif
                                         </table>
                                     </div>

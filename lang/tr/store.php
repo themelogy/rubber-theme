@@ -22,6 +22,9 @@ return [
         'search' => [
             'title'        => 'Ürün Ara',
             'find product' => ':query arama sonucunda :count ürün bulundu.'
+        ],
+        'settings' => [
+            'size' => 'Ölçü'
         ]
     ],
     'product'  => [

@@ -19,7 +19,7 @@
                     <div class="gdlr-core-pbf-background-wrap" style="background-color: #f9f9f9 ;"></div>
                     <div class="gdlr-core-sidebar-item">
                         @parentMenu($page, 'left-children')
-                        @storeLatestProduct(7, 'left-product')
+                        @storeLatestProduct(7, 'sidebar.product')
                     </div>
                 </div>
             </div>
