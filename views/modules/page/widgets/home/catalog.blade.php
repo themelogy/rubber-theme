@@ -11,7 +11,7 @@
             <div class="gdlr-core-pbf-element">
                 <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 25px;">
                     <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                        <a class="play-1 btn btn-info m-t-10" href="{{ $page->settings->embed_video ?? '' }}">
+                        <a class="play-1" href="{{ $page->settings->embed_video ?? '' }}">
                             <img src="{{ Theme::url('images/upload/gulhan-movie.jpg') }}" alt="{{ $page->title }}">
                         </a>
                     </div>

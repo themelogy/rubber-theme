@@ -10,13 +10,13 @@
                 </div>
             </div>
             @foreach($categories as $category)
-            @if($image = $category->present()->firstImage(800,420,'fit',50))
+            @if($image = $category->present()->firstImage(360,200,'fit',50))
             <div class="gdlr-core-pbf-column gdlr-core-column-20{{ $loop->first == 1 ? ' gdlr-core-column-first' : '' }}">
-                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
                         <div class="gdlr-core-pbf-element">
-                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 35px;">
-                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-round" style="border-width: 0px;"> <a href="{{ $category->url }}" target="_self"><img src="{{ $image }}" alt="{{ $category->title }}"><span class="gdlr-core-image-overlay " style="background: rgba(236, 182, 34, 0.6) ;"><i class="gdlr-core-image-overlay-icon fa fa-link gdlr-core-size-28" style="color: #ffffff;"></i></span></a> </div>
+                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 35px;min-height: 200px;max-height: 200px; margin-bottom: 10px;">
+                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-round" style="border-width: 0px;"> <a href="{{ $category->url }}" target="_self"><img src="{{ $image }}" alt="{{ $category->title }}" class="img-thumbnail img-rounded"><span class="gdlr-core-image-overlay " style="background: rgba(236, 182, 34, 0.6) ;"><i class="gdlr-core-image-overlay-icon fa fa-link gdlr-core-size-28" style="color: #ffffff;"></i></span></a> </div>
                             </div>
                         </div>
                         <div class="gdlr-core-pbf-element">

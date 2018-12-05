@@ -49,16 +49,20 @@
                                 <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 " data-type="carousel" data-column="4" data-nav="navigation" data-nav-parent="gdlr-core-portfolio-item" data-disable-autoslide="1">
                                     <ul class="slides">
                                         @foreach($products as $product)
-                                        <li>
-                                            <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-normal">
-                                                <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
-                                                    <div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover"><img src="{{ $product->present()->firstImage(305,380,'fit',50) }}" alt=""><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"> <span class="gdlr-core-image-overlay-content"><span class="gdlr-core-portfolio-title gdlr-core-title-font"><a href="{{ $product->url }}">{{ $product->title }}</a></span><span class="gdlr-core-portfolio-icon-wrap"> <a class="gdlr-core-ilightbox gdlr-core-js " href="{{ $product->present()->firstImage(800,null,'resize',50) }}" data-ilightbox-group="gdlr-core-img-group-{{ $product->id }}"><i class="gdlr-core-portfolio-icon icon_zoom-in_alt"></i></a></span></span> </span> </div>
-                                                </div>
-                                                <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
-                                                    <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 18px;font-weight: 600;letter-spacing: 0px;text-transform: none;"><a href="{{ $product->url }}">{{ $product->title }}</a></h3>
-                                                    <span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption"><a href="{{ $product->brand->url ?? null }}" rel="tag">{{ $product->brand->title ?? null }}</a> <span class="gdlr-core-sep">/</span> <a href="{{ $product->present()->category_url }}" rel="tag">{{ $product->present()->category_title }}</a></span> </div>
-                                            </div>
-                                        </li>
+                                            @if($image = $product->present()->firstImage(null,380,'resize',50))
+                                                <li>
+                                                    <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-normal">
+                                                        <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                            <div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover">
+                                                                <img style="padding: 10px;" src="{{ $image }}" alt="{{ $product->title }}">
+                                                                <span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"> <span class="gdlr-core-image-overlay-content"><span class="gdlr-core-portfolio-title gdlr-core-title-font"><a href="{{ $product->url }}">{{ $product->title }}</a></span><span class="gdlr-core-portfolio-icon-wrap"> <a class="gdlr-core-ilightbox gdlr-core-js " href="{{ $product->present()->firstImage(800,null,'resize',50) }}" data-ilightbox-group="gdlr-core-img-group-{{ $product->id }}"><i class="gdlr-core-portfolio-icon icon_zoom-in_alt"></i></a></span></span> </span> </div>
+                                                        </div>
+                                                        <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                            <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 18px;font-weight: 600;letter-spacing: 0px;text-transform: none;"><a href="{{ $product->url }}">{{ $product->title }}</a></h3>
+                                                            <span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption"><a href="{{ $product->brand->url ?? null }}" rel="tag">{{ $product->brand->title ?? null }}</a> <span class="gdlr-core-sep">/</span> <a href="{{ $product->present()->category_url }}" rel="tag">{{ $product->present()->category_title }}</a></span> </div>
+                                                    </div>
+                                                </li>
+                                            @endif
                                         @endforeach
                                     </ul>
                                 </div>

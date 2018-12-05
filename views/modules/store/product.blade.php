@@ -15,7 +15,7 @@
                         @php $images = $product->present()->images(null,400,'resize',80) @endphp
                         @if(count($images)>0)
                         <div class="product-images" style="margin-bottom: 20px;">
-                            <div class="fotorama" data-allowfullscreen="true">
+                            <div class="fotorama_custom" data-allowfullscreen="true">
                                 @foreach($images as $image)
                                     <img src="{{ $image }}" alt="{{ $product->title . ' ' . $loop->iteration }}">
                                 @endforeach
@@ -114,4 +114,14 @@
             margin: 0 auto;
         }
     </style>
+    <script>
+        var $fotoramaDiv = jQuery('.fotorama_custom').fotorama({
+            allowfullscreen: true
+        });
+        var fotorama = $fotoramaDiv.data('fotorama');
+
+        jQuery('.fotorama__stage__shaft').on('click',function () {
+            fotorama.cancelFullScreen();
+        });
+    </script>
 @endpush
