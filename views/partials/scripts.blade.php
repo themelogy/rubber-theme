@@ -1,6 +1,39 @@
 @stack('css-stack')
 @stack('css-inline')
 {!! Asset::styles('footer') !!}
+{!! Theme::script("js/jquery/jquery.js") !!}
+{!! Theme::script("js/jquery/jquery-migrate.min.js") !!}
+{!! Theme::script("js/jquery/ui/effect.min.js") !!}
+{!! Theme::script("js/script.js") !!}
+{!! Theme::script("plugins/goodlayers-core/plugins/combine/script.js") !!}
+{!! Theme::script("plugins/goodlayers-core/include/js/page-builder.js") !!}
+{!! Asset::js('footer') !!}
+@stack('js-stack')
+@stack('js-inline')
+<script>
+    /*<![CDATA[*/
+    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+    var htmlDivCss = "";
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+</script>
+<script>
+    /*<![CDATA[*/
+    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+    var htmlDivCss = "";
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+</script>
 <script type="text/javascript">
     WebFontConfig = {
         google: {
@@ -21,36 +54,3 @@
         s.parentNode.insertBefore(wf, s);
     })();
 </script>
-{!! Theme::script("js/jquery/jquery.js") !!}
-{!! Theme::script("js/jquery/jquery-migrate.min.js") !!}
-{!! Theme::script("js/jquery/ui/effect.min.js") !!}
-{!! Theme::script("js/script.js") !!}
-{!! Theme::script("plugins/goodlayers-core/plugins/combine/script.js") !!}
-{!! Theme::script("plugins/goodlayers-core/include/js/page-builder.js") !!}
-<script>
-    /*<![CDATA[*/
-    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-    var htmlDivCss = "";
-    if (htmlDiv) {
-        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-    } else {
-        var htmlDiv = document.createElement("div");
-        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-    } /*]]>*/
-</script>
-<script>
-    /*<![CDATA[*/
-    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-    var htmlDivCss = "";
-    if (htmlDiv) {
-        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-    } else {
-        var htmlDiv = document.createElement("div");
-        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-    } /*]]>*/
-</script>
-{!! Asset::js('footer') !!}
-@stack('js-stack')
-@stack('js-inline')
