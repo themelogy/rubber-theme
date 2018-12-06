@@ -16,17 +16,17 @@ return [
         ]
     ],
     'header' => [
-        'call' => 'Türkiye\'nin her yerinden'
+        'call' => 'Anywhere in Turkey'
     ],
     'footer' => [
         'info'       => '1978\'de kurulan GÜLHAN, şu anda  6000 m² lik kapalı alana sahip tesislerinde iş ve inşaat makineleri sektörüne kauçuk ağırlıklı yedek parçalar üreten lokomotif firmalardan biridir.',
-        'copyrights' => 'Tüm hakları saklıdır :date :company'
+        'copyrights' => 'All rights reserved :date :company'
     ],
     'buttons' => [
-        'details'  => 'Detaylı Bilgi',
-        'offer'    => 'Teklif Al',
-        'view'     => 'İncele',
-        'document' => 'Dökümanı İndir',
-        'video'    => 'Tanıtım Filmi'
+        'details'  => 'Read more',
+        'offer'    => 'Get Offer',
+        'view'     => 'View more',
+        'document' => 'Download Document',
+        'video'    => 'Introductory Film'
     ]
 ];

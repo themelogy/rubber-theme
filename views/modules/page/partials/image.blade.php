@@ -1,39 +1,57 @@
 @php
     $img = (object)[
-        'width'    => $page->settings->image_width ?? 400,
-        'height'   => $page->settings->image_height ?? null,
-        'mode'     => $page->settings->image_mode ?? 'fit',
-        'quality'  => $page->settings->image_quality ?? 80,
-        'position' => $page->settings->image_position ?? null,
-        'show'     => $page->settings->show_image ?? null,
-        'margin'   => 20
+        'width'         => $page->settings->image_width ?? 400,
+        'height'        => $page->settings->image_height ?? null,
+        'mode'          => $page->settings->image_mode ?? 'fit',
+        'quality'       => $page->settings->image_quality ?? 80,
+        'position'      => $page->settings->image_position ?? null,
+        'show_gallery'  => $page->settings->show_gallery ?? false,
+        'show_image'    => $page->settings->show_image ?? false,
+        'class'         => ['img-thumbnail'],
+        'images'        => null,
+        'image'         => null
     ];
-    $class = collect(['img-thumbnail']);
+
+    $img->class  = collect($img->class);
     switch ($img->position) {
         case 'top':
-            $class->push('img-responsive md-m-bot-20');
+            $img->class->push('img-responsive md-m-bot-20');
             break;
         case 'bottom':
-            $class->push('img-responsive md-m-top-20');
+            $img->class->push('img-responsive md-m-top-20');
             break;
         case 'left':
-            $class->push('pull-left md-m-rgt-20 md-m-bot-20');
+            $img->class->push('pull-left md-m-rgt-20 md-m-bot-20');
             break;
         case 'right':
-        $class->push('pull-right md-m-lft-20 md-m-bot-20');
+        $img->class->push('pull-right md-m-lft-20 md-m-bot-20');
         break;
         default:
-        $class->push('md-m-bot-20');
+        $img->class->push('md-m-bot-20');
     }
-    $image          = $page->present()->firstImage($img->width, $img->height, $img->mode, $img->quality);
-    $html_image     = Html::image($image, $page->title, ['class'=>$class->implode(' ')]);
-    $body           = in_array($img->position, ['','left','right','top']) ? $html_image.$page->body : $page->body.$html_image;
+
+    $img->images = $img->show_gallery ? $page->present()->images($img->width, $img->height, $img->mode, $img->quality) : null;
+    $img->image  = $img->show_image ? $page->present()->firstImage($img->width, $img->height, $img->mode, $img->quality) : null;
+
+    $html = "";
+    if($img->show_gallery && $img->images) {
+        $html .= '<div class="gallery '.$img->class->except(0)->implode(' ').'" style="width:'.$img->width.'px;">';
+        $html .= '<div class="owl-carousel owl-theme owl-auto" data-items="1">';
+        foreach ($img->images as $image) {
+            $html .= '<div class="item">';
+            $html .= Html::image($image, $page->title, ['class'=>$img->class->implode(' ')]);
+            $html .= '</div>';
+        }
+        $html .= '</div>';
+        $html .= '</div>';
+    } elseif ($img->show_image && $img->image) {
+        $html .= Html::image($img->image, $page->title, ['class'=>$img->class->implode(' ')]);
+    }
+    $html = in_array($img->position, ['','left','right','top']) ? $html.$page->body : $page->body.$html;
+
 @endphp
 
-@if(@$page->settings->show_docs)
-    @include('page::widgets.documents')
-@elseif($img->show && $image)
-    {!! $body !!}
-@else
-    {!! $page->body !!}
-@endif
+{!! $html !!}
+
+
+
