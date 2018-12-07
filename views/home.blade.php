@@ -6,7 +6,7 @@
     @include('page::widgets.home.intro')
     @include('page::widgets.home.call')
     @storeCategory(6,'home.category')
-    @storeLatestProduct(8, 'home.product')
+    @storeNewProducts(8, 'home.product')
     @include('partials.content.three-box')
     @guestbookLatest(6, 'home.latest')
     @portfolioBrands(10, 'home.brands')
