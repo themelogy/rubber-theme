@@ -13,7 +13,7 @@
                 <div class="gdlr-core-pbf-sidebar-content  gdlr-core-column-45 gdlr-core-pbf-sidebar-padding gdlr-core-line-height gdlr-core-column-extend-right" style="padding: 60px 0px 30px 30px;">
                     <div class="gdlr-core-pbf-sidebar-content-inner">
                         <div class="gdlr-core-portfolio-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
-                            <p>{{ trans('themes::store.products.search.find product', ['query'=> $query,'count' => $products->count()]) }}</p>
+                            <p>{{ trans('themes::store.products.search.find product', ['query'=> $query,'count' => $products->total()]) }}</p>
                             @include('store::partials.product-row')
                         </div>
                     </div>

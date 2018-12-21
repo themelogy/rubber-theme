@@ -7,7 +7,8 @@
                         <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.5.1">
                             <ul>
                                 @foreach($slides as $slide)
-                                <li data-index="rs-{{ $loop->iteration }}" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="upload/slider-1-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="{{ $slide->present()->firstImage(1800,730,'fit',50) }}" alt="" title="slider-1" width="1800" height="730" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina="">
+                                <li data-index="rs-{{ $loop->iteration }}" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="upload/slider-1-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> 
+                                    <img data-lazyload="{{ $slide->present()->firstImage(1800,730,'fit',50) }}" alt="" title="slider-1" width="1800" height="730" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina="">
                                     @if($slide->title)
                                     <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="20" data-y="center" data-voffset="-50" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","speed":260,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textalign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 2em; font-weight: 400; color: rgba(248,193,44,1);font-family:Hind;">{{ $slide->title }}</div>
                                     @endif
@@ -134,7 +135,7 @@
                     visibilityLevels: [1240, 1024, 778, 480],
                     gridwidth: 1180,
                     gridheight: 725,
-                    lazyType: "none",
+                    lazyType: "smart",
                     shadow: 0,
                     spinner: "off",
                     stopLoop: "off",
