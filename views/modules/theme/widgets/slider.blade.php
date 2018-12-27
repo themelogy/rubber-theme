@@ -34,18 +34,18 @@
 </div>
 
 @push('js-stack')
-    {!! Theme::script("plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js") !!}
-    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js") !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js", ['defer']) !!}
+    {!! Theme::script("plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js", ['defer']) !!}
 @endpush
 
 @push('js-inline')
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         /*<![CDATA[*/
         function setREVStartSize(e) {
             try {
@@ -77,7 +77,7 @@
             }
         }; /*]]>*/
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         /*<![CDATA[*/
         function revslider_showDoubleJqueryError(sliderID) {
             var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
@@ -88,7 +88,7 @@
             jQuery(sliderID).show().html(errorMessage);
         } /*]]>*/
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         setREVStartSize({
             c: jQuery('#rev_slider_1_1'),
             gridwidth: [1180],

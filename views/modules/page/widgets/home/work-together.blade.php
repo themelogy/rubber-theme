@@ -24,7 +24,7 @@
                     <span class="gdlr-core-content">{{ $page->settings->sub_title->{locale()} ?? '' }}</span>
                 </a>
             </div>
-            <a href="@homepage"><img src="{{ Theme::url('images/logo.png') }}" alt="{{ setting('theme::company-name') }}"></a>
+            <img src="{{ Theme::url('images/logo.png') }}" alt="{{ setting('theme::company-name') }}">
         </div>
         @endisset
     </div>

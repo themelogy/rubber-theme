@@ -8,13 +8,17 @@
         @foreach(LaravelLocalization::getSupportedLocales() as $locale => $language)
                 <div class="tab-pane {{ $loop->first ? 'active' : '' }}" id="text_field_{{ $locale }}">
                     @foreach($fields as $field)
-                    <div class="form-group{{ $errors->has("settings.slogan") ? ' has-error' : '' }}">
-                        {!! Form::label("settings.{$field}.{$locale}", $labels[$field].':') !!}
-                        {!! Form::input('text', 'settings['.$field.']['.$locale.']', old('settings.'.$field.'.'.$locale, $page->settings->{$field}->{$locale} ?? ''), ['class'=>'form-control']) !!}
-                        {!! $errors->first("settings.'.$field.'.".$locale, '<span class="help-block">:message</span>') !!}
-                    </div>
+                        @includeIf('page::admin.partials.settings.fields.'.$field['type'], compact('field'))
                     @endforeach
                 </div>
         @endforeach
     </div>
 </div>
+
+@push('js-stack')
+    <script>
+        $(document).ready(function(){
+            $(".textarea-editor").wysihtml5();
+        });
+    </script>
+@endpush

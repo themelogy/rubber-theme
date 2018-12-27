@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'home' => [
+    'home'    => [
         'intro' => [
-          'slogan' => 'Makinelerinizi Hareket Ettiriyor',
+            'slogan' => 'Makinelerinizi Hareket Ettiriyor',
         ],
-        'call'   => '1978\'den beri yeni nesil üretim ile Gülhan Kauçuk farkını inceleyin.',
-        'box' => [
+        'call'  => '1978\'den beri yeni nesil üretim ile Gülhan Kauçuk farkını inceleyin.',
+        'box'   => [
             'high technology' => 'Yüksek Teknoloji',
             'production'      => 'Üretim',
             'first class'     => '1. Sınıf',
@@ -15,18 +15,19 @@ return [
             'satisfaction'    => 'Memnuniyeti'
         ]
     ],
-    'header' => [
+    'header'  => [
         'call' => 'Anywhere in Turkey'
     ],
-    'footer' => [
+    'footer'  => [
         'info'       => '1978\'de kurulan GÜLHAN, şu anda  6000 m² lik kapalı alana sahip tesislerinde iş ve inşaat makineleri sektörüne kauçuk ağırlıklı yedek parçalar üreten lokomotif firmalardan biridir.',
         'copyrights' => 'All rights reserved :date :company'
     ],
     'buttons' => [
-        'details'  => 'Read more',
-        'offer'    => 'Get Offer',
-        'view'     => 'View more',
-        'document' => 'Download Document',
-        'video'    => 'Introductory Film'
+        'details'   => 'Read more',
+        'offer'     => 'Get Offer',
+        'offer url' => '#',
+        'view'      => 'View more',
+        'document'  => 'Download Document',
+        'video'     => 'Introductory Film'
     ]
 ];

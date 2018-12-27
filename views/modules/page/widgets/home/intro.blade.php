@@ -58,7 +58,7 @@
                         <div class="gdlr-core-pbf-element">
                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 15px;">
                                 <div class="gdlr-core-title-item-title-wrap ">
-                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 36px;font-weight: 300;letter-spacing: 0px;text-transform: none;">{{ trans('themes::theme.home.intro.slogan') }}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
+                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 36px;font-weight: 300;letter-spacing: 0px;text-transform: none;">{{ isset($page) ? $page->settings->slogan->{locale()} : trans('themes::theme.home.intro.slogan') }}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3>
                                 </div>
                             </div>
                         </div>
@@ -83,14 +83,14 @@
                         <div class="gdlr-core-pbf-element">
                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 15px;">
                                 <div class="gdlr-core-text-box-item-content" style="font-size: 17px;">
-                                    {!! Block::get('home-intro') !!}
+                                    {!! isset($page) ? $page->settings->sub_title->{locale()} : Block::get('home-intro') !!}
                                 </div>
                             </div>
                         </div>
                         <div class="gdlr-core-pbf-element">
                             <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                <a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="#" style="color: #f8c12c;padding: 15px 30px 15px 30px;margin: 0px 10px 10px 0px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background: #303030 ;"> <span class="gdlr-core-content">{{ trans('themes::theme.buttons.details') }}</span></a>
-                                <a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-with-border" href="#" id="gdlr-core-button-id-38517"><span class="gdlr-core-content">{{ trans('themes::theme.buttons.offer') }}</span></a>
+                                <a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{ isset($page) ? $page->url : '' }}" style="color: #f8c12c;padding: 15px 30px 15px 30px;margin: 0px 10px 10px 0px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background: #303030 ;"> <span class="gdlr-core-content">{{ trans('themes::theme.buttons.details') }}</span></a>
+                                <a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-with-border" href="{!! trans('themes::theme.buttons.offer url') !!}" id="gdlr-core-button-id-38517"><span class="gdlr-core-content">{{ trans('themes::theme.buttons.offer') }}</span></a>
                             </div>
                         </div>
                     </div>

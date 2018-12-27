@@ -30,7 +30,21 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    @include('page::admin.partials.settings.text-field', ['fields'=>['slogan','sub_title'], 'labels'=>['slogan'=>'Slogan', 'sub_title'=>'Alt Başlık']])
+                    @include('page::admin.partials.settings.fields', [
+                            'fields' => [
+                                'slogan' => [
+                                    'title' => 'Slogan',
+                                    'name'  => 'slogan',
+                                    'type'  => 'text'
+                                ],
+                                'sub_title' => [
+                                    'title' => 'Alt Başlık',
+                                    'name' => 'sub_title',
+                                    'type' => 'textarea',
+                                    'class' => 'textarea-editor'
+                                ]
+                            ]
+                        ])
                 </div>
             </div>
         </div>

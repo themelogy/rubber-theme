@@ -3,7 +3,7 @@
 @section('content')
     <div class="gdlr-core-page-builder-body">
     @themeSlide('anasayfa', 'slider')
-    @include('page::widgets.home.intro')
+    @findPage('hakkimizda', 'home.intro')
     @include('page::widgets.home.call')
     @storeCategory(6,'home.category')
     @storeNewProducts(8, 'home.product')
