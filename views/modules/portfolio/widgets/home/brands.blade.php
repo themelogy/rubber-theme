@@ -6,9 +6,9 @@
                     <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 brands" data-type="carousel" data-column="5"  data-nav-parent="gdlr-core-blog-item">
                         <ul class="slides">
                             @foreach($brands as $brand)
-                            <li class="gdlr-core-item-mglr">
-                                <div class="gdlr-core-gallery-list gdlr-core-media-image"> <a href="#" target="_self"><img src="{{ $brand->present()->firstImage(null,240,'resize',50) }}" alt="{{ $brand->title }}"></a> </div>
-                            </li>
+                                <li class="gdlr-core-item-mglr">
+                                    <div class="gdlr-core-gallery-list gdlr-core-media-image"> <a href="{{ $brand->website }}" target="_self"><img src="{{ $brand->present()->firstImage(null,240,'resize',50) }}" alt="{{ $brand->title }}"></a> </div>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -17,16 +17,19 @@
         </div>
     </div>
 </div>
+<div class="brands"></div>
 
 @push('js-inline')
-        <script>
-            jQuery(window).load(function () {
-                var fBrands = jQuery('.brands');
-                var fItems = fBrands.find('ul.slides li').length;
-                var fColumn = fBrands.data('column');
-                if(fItems <= fColumn && fBrands.width() > 768) {
+    <script>
+        jQuery(window).load(function () {
+            var fBrands = jQuery('.brands');
+            var fItems = fBrands.find('ul.slides li').length;
+            var fColumn = fBrands.data('column');
+            if(fItems <= fColumn && fBrands.width() > 768) {
+                setTimeout(function(){
                     fBrands.find('.flex-direction-nav').remove();
-                }
-            });
-        </script>
+                },500);
+            }
+        });
+    </script>
 @endpush

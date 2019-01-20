@@ -15,7 +15,11 @@
             <tbody>
             @endif
             <tr>
-                <td><a href="{{ $product->url }}"><img src="{{ $product->present()->firstImage(null,50,'resize',80) }}" alt="{{ $product->title }}" /></a></td>
+                @if($image = $product->present()->firstImage(null,50,'resize',80))
+                    <td><a href="{{ $product->url }}"><img src="{{ $image }}" alt="{{ $product->title }}" /></a></td>
+                @else
+                    <td><a href="{{ $product->url }}"><img src="{!! placeholdit(50,50,"X") !!}" alt="{{ $product->title }}" /></a></td>
+                @endif
                 <td><a href="{{ $product->url }}">{{ $product->title }}</a></td>
                 <td><a href="{{ $product->url }}">{{ $product->sku }}</a></td>
                 <td><a href="{{ $product->url }}">{{ $product->model }}</a></td>
