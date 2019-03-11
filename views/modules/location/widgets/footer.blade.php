@@ -4,7 +4,9 @@
         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
         <i class="fa fa-phone" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->phone1 }}<br>
         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
+        @if(!empty($location->fax))
         <i class="fa fa-fax" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->fax }} <br>
         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
+        @endif
         <i class="fa fa-envelope-o" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i>{{ $location->email }}</p>
 </div>

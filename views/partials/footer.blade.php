@@ -7,8 +7,8 @@
                     <img src="{{ Theme::url('images/upload/444-46-41.png') }}"  alt="gülhan kauçuk iletişim"/> </div>
             </div>
             <div class="realfactory-footer-column realfactory-item-pdlr realfactory-column-15">
-                <div id="nav_menu-4" class="widget widget_nav_menu realfactory-widget">
-                    @storeCategory(8, 'footer.category')
+                <div id="text-7" class="widget widget_text realfactory-widget">
+                    @location('fabrika-iletisim', 'footer')
                 </div>
             </div>
             <div class="realfactory-footer-column realfactory-item-pdlr realfactory-column-15">
@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="realfactory-footer-column realfactory-item-pdlr realfactory-column-15">
-                <div id="text-7" class="widget widget_text realfactory-widget">
-                    @location('fabrika-iletisim', 'footer')
+                <div id="nav_menu-4" class="widget widget_nav_menu realfactory-widget">
+                    @location('istanbul-satis-magazasi', 'footer')
                 </div>
             </div>
         </div>

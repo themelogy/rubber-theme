@@ -11,7 +11,7 @@
 
         <div class="gdlr-core-pbf-sidebar-wrapper">
             <div class="gdlr-core-pbf-sidebar-container gdlr-core-line-height-0 clearfix gdlr-core-js gdlr-core-container"  style="padding-top: 20px; padding-left: 30px;">
-                @if(isset($page->parent) && ($page->parent->settings->show_menu ?? false) && !($page->settings->full_page ?? false))
+                @if(isset($page) && ($page->settings->show_menu ?? false) && !($page->settings->show_content ?? false))
                     @include('page::partials.menu')
                 @elseif($page && ($page->settings->list_page ?? false))
                     @include('page::partials.list')
