@@ -30,6 +30,10 @@ elixir.extend('stylistPublish', function() {
 
 elixir(function (mix) {
 
+    // mix.sass(
+    //   'style-core.scss', cssPath + '/style-core.css'
+    // );
+
     mix.del(['assets/css', 'assets/js']);
     mix.del(themePath+'/**');
 
