@@ -1,5 +1,6 @@
 <?php
 
 return [
-  'customer experiences' => 'Müşteri Deneyimleri'
+    'title'                => 'Müşteri Deneyimleri',
+    'customer experiences' => 'Müşteri Deneyimleri'
 ];

@@ -13,6 +13,10 @@ return [
             'products'        => 'Ürünler',
             'happy customer'  => 'Mutlu Müşteri',
             'satisfaction'    => 'Memnuniyeti'
+        ],
+        'search' => [
+            'placeholder1' => 'Site için arama',
+            'placeholder2' => 'Ara...'
         ]
     ],
     'header'  => [
