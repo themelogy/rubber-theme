@@ -10,7 +10,7 @@
                         <div class="gdlr-core-call-to-action-item-content-wrap">
                             <h3 class="gdlr-core-call-to-action-item-title" style="font-size: 26px;font-weight: 300;letter-spacing: 0px;">{{ trans('themes::theme.home.call') }}</h3>
                         </div>
-                        <div class="gdlr-core-call-to-action-item-button"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{ trans('themes::theme.buttons.details url') }}" style="border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;"><span class="gdlr-core-content">{{ trans('themes::theme.buttons.details') }}</span></a></div>
+                        <div class="gdlr-core-call-to-action-item-button"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{ $page->url }}" style="border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;"><span class="gdlr-core-content">{{ trans('themes::theme.buttons.details') }}</span></a></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<div class="gdlr-core-pbf-wrapper testimonials" style="padding: 110px 0 70px 0;" data-skin="Dark">
+<div class="gdlr-core-pbf-wrapper testimonials" style="padding: 70px 0 30px 0;" data-skin="Dark">
     <div class="gdlr-core-pbf-background-wrap">
         <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{ Theme::url('images/upload/testimonial-bg.jpg') }});background-size: cover;background-position: center;" data-parallax-speed="0.2"></div>
     </div>
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="gdlr-core-pbf-element">
-                <div class="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-normal" style="padding-bottom: 50px;">
+                <div class="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-normal">
                     <div class="gdlr-core-divider-container gdlr-core-center-align" style="max-width: 87px;">
                         <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-bottom-width: 2px;"></div>
                     </div>
@@ -20,20 +20,22 @@
             </div>
             <div class="gdlr-core-pbf-element">
                 <div class="gdlr-core-testimonial-item gdlr-core-item-pdb clearfix  gdlr-core-testimonial-style-center gdlr-core-item-pdlr">
-                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 gdlr-core-nav-style-middle-large" data-type="carousel" data-column="1" data-nav="bullet" data-vcenter-nav="1">
+                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 gdlr-core-nav-style-middle-large" data-type="carousel" data-column="3" data-nav="bullet" data-vcenter-nav="1">
                         <ul class="slides">
                             @foreach($comments as $comment)
                             <li class="gdlr-core-item-mglr">
                                 <div class="gdlr-core-testimonial clearfix">
                                     <div class="gdlr-core-testimonial-content-wrap">
-                                        <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 21px;">
+                                        <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 13px;">
                                             <p>{{ strip_tags($comment->message) }}</p>
                                         </div>
                                         <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon">&#8220;</div>
                                         <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                            <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src="{{ $comment->present()->firstImage(120,120,'fit',50) }}" alt="{{ $comment->fullname }}"></div>
+                                            @if($image = $comment->present()->firstImage(120,120,'fit',50))
+                                            <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src="{{ $image }}" alt="{{ $comment->fullname }}"></div>
+                                            @endif
                                             <div class="gdlr-core-testimonial-author-content">
-                                                <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #ffffff;">{{ $comment->fullname }}</div>
+                                                <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #ffffff; font-size: 14px;">{{ $comment->fullname }}</div>
                                                 {{--<div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption">Caterpillar</div>--}}
                                             </div>
                                         </div>

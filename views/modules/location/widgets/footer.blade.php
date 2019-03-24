@@ -6,7 +6,7 @@
         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
         @endif
         @if(!empty($location->phone1))
-        <i class="fa fa-phone" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->phone1 }}<br>
+        <a style="color:white;" href="tel:{{ $location->phone1 }}"><i class="fa fa-phone" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->phone1 }}</a><br>
         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
         @endif
         @if(!empty($location->phone2))
@@ -18,6 +18,6 @@
         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
         @endif
         @if(!empty($location->email))
-        <i class="fa fa-envelope-o" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i>{{ $location->email }}</p>
+        <a style="color:white;" href="mailto:{{ $location->email }}"><i class="fa fa-envelope-o" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i> {{ $location->email }}</a></p>
         @endif
 </div>

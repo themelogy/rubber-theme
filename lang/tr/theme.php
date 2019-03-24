@@ -2,17 +2,18 @@
 
 return [
     'home'    => [
-        'intro' => [
+        'intro'  => [
             'slogan' => 'Makinelerinizi Hareket Ettiriyor',
         ],
-        'call'  => '1978\'den beri yeni nesil üretim ile Gülhan Kauçuk farkını inceleyin.',
-        'box'   => [
+        'call'   => '1978\'den beri yeni nesil üretim ile Gülhan Kauçuk farkını inceleyin.',
+        'box'    => [
             'high technology' => 'Yüksek Teknoloji',
             'production'      => 'Üretim',
             'first class'     => '1. Sınıf',
             'products'        => 'Ürünler',
             'happy customer'  => 'Mutlu Müşteri',
-            'satisfaction'    => 'Memnuniyeti'
+            'satisfaction'    => 'Memnuniyeti',
+            'intro video'     => 'Tanıtım Filmi'
         ],
         'search' => [
             'placeholder1' => 'Site için arama',
@@ -27,12 +28,12 @@ return [
         'copyrights' => 'Tüm hakları saklıdır :date :company'
     ],
     'buttons' => [
-        'details'     => 'Detaylı Bilgi',
-        'details url' => '#',
-        'offer'       => 'Teklif Al',
-        'offer url'   => '#',
-        'view'        => 'İncele',
-        'document'    => 'Dökümanı İndir',
-        'video'       => 'Tanıtım Filmi'
+        'details'                => 'Detaylı Bilgi',
+        'details url'            => '#',
+        'offer'                  => 'Teklif Al',
+        'offer url'              => '#',
+        'view'                   => 'İncele',
+        'document'               => 'Dökümanı İndir',
+        'video'                  => 'Tanıtım Filmi'
     ]
 ];

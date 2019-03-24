@@ -11,11 +11,14 @@
                 <div class="textwidget">
                     <p><i class="fa fa-location-arrow" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i>{{ $location->present()->address }}<br>
                         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
-                        <i class="fa fa-phone" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->phone1 }}<br>
+                        <a href="tel:{{ $location->phone1 }}"><i class="fa fa-phone" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->phone1 }}</a><br>
                         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
                         <i class="fa fa-fax" style="font-size: 20px;color: #f7c02e;margin-right: 10px;"></i> {{ $location->fax }} <br>
                         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
-                        <i class="fa fa-envelope-o" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i>{{ $location->email }}</p>
+                        <a href="mailto:{{ $location->email }}"><i class="fa fa-envelope-o" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i>{{ $location->email }}</a></p>
+                </div>
+                <div class="direction">
+                    <a style="width: 100%;" target="_blank" href="https://www.google.com/maps/dir/Current+Location/{!! $location->lat.','.$location->long !!}" class="btn btn-default">Yol Tarifi Al</a>
                 </div>
                 <div id="map{{ $location->id }}" style="height: 300px;"></div>
             </div>

@@ -1,4 +1,5 @@
 {!! seo_helper()->render() !!}
+<link rel="icon" href="{{ Theme::url('images/favicon.png') }}" type="image/png"/>
 {!! Theme::style("plugins/revslider/public/assets/css/settings.css") !!}
 @if(App::environment()=='local')
 {!! Theme::style("css/style-core.css") !!}

@@ -3,6 +3,6 @@
 return [
     'title' => [
         'homepage'           => 'Anasayfa',
-        'introductory video' => 'Tanıtım Filmi'
+        'introductory video' => 'Tanıtım Dökümanları'
     ]
 ];

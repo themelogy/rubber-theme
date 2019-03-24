@@ -13,7 +13,7 @@
         <div class="gdlr-core-pbf-element">
             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                 <div class="gdlr-core-text-box-item-content" style="font-size: 18px;">
-                    <p>{{ $page->settings->slogan->{locale()} ?? '' }}</p>
+                    <p>{{ $page->settings->sub_title->{locale()} ?? '' }}</p>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
         <div class="gdlr-core-pbf-element">
             <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                 <a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-with-border" href="{{ $page->url }}" style="font-size: 15px;color: #f8c12c;padding: 15px 28px 15px 28px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-width: 2px 2px 2px 2px;border-color: #f8c12c;">
-                    <span class="gdlr-core-content">{{ $page->settings->sub_title->{locale()} ?? '' }}</span>
+                    <span class="gdlr-core-content">{{ $page->settings->slogan->{locale()} ?? '' }}</span>
                 </a>
             </div>
             <img src="{{ Theme::url('images/logo.png') }}" alt="{{ setting('theme::company-name') }}">

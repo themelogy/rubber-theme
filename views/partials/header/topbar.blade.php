@@ -15,7 +15,7 @@
         </div>
         <div class="realfactory-top-bar-right realfactory-item-pdlr">
             <div class="realfactory-top-bar-right-social">
-                <strong style="text-transform: uppercase;">{{ trans('themes::theme.header.call') }}</strong> <i class="fa fa-phone"></i> <strong> {{ setting('theme::phone') }}</strong>
+                <strong class="hidden-xs" style="text-transform: uppercase;">{{ trans('themes::theme.header.call') }}</strong> <i class="fa fa-phone"></i> <strong> {{ setting('theme::phone') }}</strong>
                 @foreach(['facebook' => 'fa-facebook-f', 'twitter'=>'fa-twitter', 'google'=>'fa-google-plus-g', 'whatsapp'=>'fa-whatsapp', 'linkedin'=>'fa-linkedin', 'youtube'=>'fa-youtube-play', 'email'=>'fa-envelope'] as $sk => $sv)
                 @if(setting('theme::'.$sk))
                 <a href="{{ setting('theme::'.$sk) }}" target="_blank" class="realfactory-top-bar-social-icon" title="{{ $sk }}">

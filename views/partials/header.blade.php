@@ -2,7 +2,7 @@
 <header class="realfactory-header-wrap realfactory-header-style-bar realfactory-header-background  realfactory-style-left">
     <div class="realfactory-header-container clearfix  realfactory-container">
         <div class="realfactory-header-container-inner">
-            <div class="realfactory-logo  realfactory-item-pdlr">
+            <div class="realfactory-logo realfactory-item-pdlr">
                 <div class="realfactory-logo-inner"> <a href="{{ url(locale()) }}"><img src="{{ Theme::url('images/logo.png') }}" alt="{{ setting('theme::company-name') }}"></a> </div>
             </div>
         </div>

@@ -7,7 +7,13 @@
                         <ul class="slides">
                             @foreach($brands as $brand)
                                 <li class="gdlr-core-item-mglr">
-                                    <div class="gdlr-core-gallery-list gdlr-core-media-image"> <a href="{{ $brand->website }}" target="_self"><img src="{{ $brand->present()->firstImage(null,240,'resize',50) }}" alt="{{ $brand->title }}"></a> </div>
+                                    <div class="gdlr-core-gallery-list gdlr-core-media-image">
+                                        @if(!empty($brand->website))
+                                            <a href="{{ $brand->website }}" target="_self"><img src="{{ $brand->present()->firstImage(null,240,'resize',50) }}" alt="{{ $brand->title }}"></a>
+                                        @else
+                                            <img src="{{ $brand->present()->firstImage(null,240,'resize',50) }}" alt="{{ $brand->title }}">
+                                        @endif
+                                    </div>
                                 </li>
                             @endforeach
                         </ul>

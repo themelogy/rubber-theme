@@ -7,17 +7,6 @@
                 </div>
             </div>
         </div>
-        @isset($page->settings->embed_video)
-            <div class="gdlr-core-pbf-element">
-                <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 25px;">
-                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                        <a class="play-1" href="{{ $page->settings->embed_video ?? '' }}">
-                            <img src="{{ Theme::url('images/upload/gulhan-movie.jpg') }}" alt="{{ $page->title }}">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        @endisset
         <div class="gdlr-core-pbf-element">
             <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-with-divider">
                 <ul>
@@ -33,17 +22,3 @@
         </div>
     </div>
 </div>
-
-@push('css-stack')
-    {!! Theme::style('js/youtubeurl/jquery.yu2fvl.css') !!}
-@endpush
-
-@push('js-stack')
-    {!! Theme::script('js/youtubeurl/jquery.yu2fvl.min.js') !!}
-@endpush
-
-@push('js-inline')
-    <script> jQuery(document).ready(function(){
-            jQuery('.play-1').yu2fvl({minPaddingX: 600, minPaddingY: 200});
-        });</script>
-@endpush

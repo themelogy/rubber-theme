@@ -2924,9 +2924,9 @@ body.realfactory-boxed .gdlr-core-column-extend-right .gdlr-core-pbf-background-
   }
 
   /* remove header */
-  .realfactory-top-bar {
-    display: none;
-  }
+  //.realfactory-top-bar {
+  //  display: none;
+  //}
   .realfactory-header-wrap.realfactory-header-style-plain,
   .realfactory-header-wrap.realfactory-header-style-bar, .realfactory-navigation-bar-wrap,
   .realfactory-header-background-transparent, .realfactory-header-boxed-wrap, .realfactory-header-side-nav,
@@ -4678,3 +4678,7 @@ html.mm-opening.realfactory-mmenu-right .realfactory-mobile-header {
 #back-to-top.show {
   opacity: 1;
 }
+
+
+
+//Card
