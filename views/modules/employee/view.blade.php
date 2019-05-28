@@ -16,7 +16,7 @@
                             <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-personnel-item-style-modern gdlr-core-personnel-style-modern gdlr-core-with-divider ">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img class="img-thumbnail" src="{{ $employee->present()->firstImage(270,286,'fit',80) }}" alt="{{ $employee->fullname }}" />
+                                        <img class="img-thumbnail" src="{{ $employee->present()->firstImage(270,null,'resize',80) }}" alt="{{ $employee->fullname }}" />
                                     </div>
                                     <div class="col-md-9">
                                         <h3>{{ $employee->fullname }}<br/><small>{{ $employee->position }}</small></h3>

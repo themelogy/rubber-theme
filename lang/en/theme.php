@@ -33,5 +33,11 @@ return [
         'view'      => 'View more',
         'document'  => 'Download Document',
         'video'     => 'Introductory Film'
+    ],
+    'messages' => [
+        'page not found'         => 'Page not found',
+        'page not found message' => 'The page you are looking for was moved, removed, renamed or might never existed.',
+        'system error'           => 'System Error',
+        'system error message'   => 'Webmaster was informed about the error.'
     ]
 ];

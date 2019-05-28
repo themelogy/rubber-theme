@@ -1,5 +1,5 @@
 <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-hide-in-mobile">
-    <a class="js-modal-btn" data-video-id="{{ $page->settings->embed_video ?? '' }}" href="#">
+    <a class="js-modal-btn" data-video-id="{{ $page->settings->embed_video ?? '' }}" data-autoplay="true" href="#">
     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: -100px 0px 0px 0px;padding: 75px 0px 65px 0px;" data-sync-height="height-service-1">
         <div class="gdlr-core-pbf-background-wrap">
             <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{ Theme::url('images/upload/service-3-1.jpg') }});background-size: cover;background-position: center;" data-parallax-speed="0"></div>
@@ -29,7 +29,9 @@
     <script>
         jQuery(document).ready(function(){
             jQuery(".js-modal-btn").modalVideo({
-                autoplay: 1
+                youtube : {
+                	autoplay: true
+                }
             });
         });
     </script>

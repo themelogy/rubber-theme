@@ -35,5 +35,11 @@ return [
         'view'                   => 'İncele',
         'document'               => 'Dökümanı İndir',
         'video'                  => 'Tanıtım Filmi'
+    ],
+    'messages' => [
+        'page not found'         => 'Sayfa bulunamadı.',
+        'page not found message' => 'Bakmış olduğunuz sayfa taşınmış, silinmiş, adı değiştirilmiş ya da hiç eklenmemiş olabilir.',
+        'system error'           => 'Sistem Hatası',
+        'system error message'   => 'Yönetici hata hakkında bilgilendirildi.'
     ]
 ];
