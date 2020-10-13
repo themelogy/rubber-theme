@@ -5,6 +5,7 @@
             @foreach($categories as $category)
                 <li class="menu-item"><a href="{{ $category->url }}">{{ $category->title }}</a></li>
             @endforeach
+            @unset($categories)
         </ul>
     </div>
 </div>

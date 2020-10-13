@@ -3,16 +3,17 @@
 return [
     'home'    => [
         'intro' => [
-            'slogan' => 'Makinelerinizi Hareket Ettiriyor',
+            'slogan' => 'Moves Your Machines',
         ],
-        'call'  => '1978\'den beri yeni nesil üretim ile Gülhan Kauçuk farkını inceleyin.',
+        'call'  => 'Since 1978, look at Gülhan Rubber difference with new generation production.',
         'box'   => [
-            'high technology' => 'Yüksek Teknoloji',
-            'production'      => 'Üretim',
-            'first class'     => '1. Sınıf',
-            'products'        => 'Ürünler',
+            'high technology' => 'Hight Technology',
+            'production'      => 'Production',
+            'first class'     => '1. Class',
+            'products'        => 'Products',
             'happy customer'  => 'Mutlu Müşteri',
-            'satisfaction'    => 'Memnuniyeti'
+            'satisfaction'    => 'Memnuniyeti',
+            'intro video'     => 'Introductory Video'
         ],
         'search' => [
             'placeholder1' => 'Search in site',
@@ -23,7 +24,7 @@ return [
         'call' => 'Anywhere in Turkey'
     ],
     'footer'  => [
-        'info'       => '1978\'de kurulan GÜLHAN, şu anda  6000 m² lik kapalı alana sahip tesislerinde iş ve inşaat makineleri sektörüne kauçuk ağırlıklı yedek parçalar üreten lokomotif firmalardan biridir.',
+        'info'       => 'Founded in 1978, GÜLHAN is one of the locomotive companies producing spare parts with rubber parts in the construction and construction machinery sector at its facilities with 6000 m² closed area.',
         'copyrights' => 'All rights reserved :date :company'
     ],
     'buttons' => [

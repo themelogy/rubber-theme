@@ -42,3 +42,5 @@
         s.parentNode.insertBefore(wf, s);
     })(document);
 </script>
+
+{!! setting('core::analytics-script') !!}

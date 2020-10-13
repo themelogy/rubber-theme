@@ -4,12 +4,7 @@
         <div class="realfactory-top-bar-left realfactory-item-pdlr">
             <div class="gdlr-core-dropdown-tab gdlr-core-js clearfix">
                 <div class="gdlr-core-dropdown-tab-title">
-                    <span class="gdlr-core-head">{{ LaravelLocalization::getCurrentLocaleNative() }}</span>
-                    <div class="gdlr-core-dropdown-tab-head-wrap">
-                        @foreach(LaravelLocalization::getSupportedLocales() as $locale => $supportedLocale)
-                        <div class="gdlr-core-dropdown-tab-head{{ $locale==locale() ? ' gdlr-core-active' : '' }}" data-index="{{ $loop->iteration }}"><a href="{{ url($locale) }}">{!! $supportedLocale['native'] !!}</a></div>
-                        @endforeach
-                    </div>
+                    @include('partials.header.default-language')
                 </div>
             </div>
         </div>

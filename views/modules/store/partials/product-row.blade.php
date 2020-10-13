@@ -18,7 +18,7 @@
                 @if($image = $product->present()->firstImage(null,50,'resize',80))
                     <td><a href="{{ $product->url }}"><img src="{{ $image }}" alt="{{ $product->title }}" /></a></td>
                 @else
-                    <td><a href="{{ $product->url }}"><img src="{!! placeholdit(50,50,"X") !!}" alt="{{ $product->title }}" /></a></td>
+                    <td><a href="{{ $product->url }}"><img src="https://via.placeholder.com/50x50.png?text=X" alt="{{ $product->title }}" /></a></td>
                 @endif
                 <td><a href="{{ $product->url }}">{{ $product->title }}</a></td>
                 <td><a href="{{ $product->url }}">{{ $product->sku }}</a></td>

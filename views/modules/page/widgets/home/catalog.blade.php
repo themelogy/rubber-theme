@@ -17,6 +17,7 @@
                             </a>
                         </li>
                     @endforeach
+                    {!! Menu::render('documents', \Themes\Rubber\Presenter\DocumentMenuLinksPresenter::class) !!}
                 </ul>
             </div>
         </div>

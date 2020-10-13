@@ -17,10 +17,12 @@
                         <span class="gdlr-core-space-shortcode" style="margin-top: -6px;"></span> <br>
                         <a href="mailto:{{ $location->email }}"><i class="fa fa-envelope-o" style="font-size: 20px;color: #f7c02e;margin-left: 0px;margin-right: 10px;"></i>{{ $location->email }}</a></p>
                 </div>
-                <div class="direction">
-                    <a style="width: 100%;" target="_blank" href="https://www.google.com/maps/dir/Current+Location/{!! $location->lat.','.$location->long !!}" class="btn btn-default">Yol Tarifi Al</a>
+                <div class="map-style">
+                    <div id="map{{ $location->id }}" style="height: 300px;"></div>
+                    <div class="direction">
+                        <a style="width: 100%;" target="_blank" href="https://www.google.com/maps/dir/Current+Location/{!! $location->lat.','.$location->long !!}" class="btn btn-default">Yol Tarifi Al</a>
+                    </div>
                 </div>
-                <div id="map{{ $location->id }}" style="height: 300px;"></div>
             </div>
             @endforeach
         </div>

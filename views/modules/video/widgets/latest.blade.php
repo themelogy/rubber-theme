@@ -36,6 +36,7 @@
                     </div>
                 </div>
             @endforeach
+            @unset($medias)
         </div>
     </div>
 </div>

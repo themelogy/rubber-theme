@@ -6,3 +6,4 @@
 @else
 <link rel="stylesheet" href="{{ elixir('css/style-core.min.css', 'themes/rubber') }}" />
 @endif
+{!! Theme::style("vendor/flag-icon-css/css/flag-icon.css") !!}

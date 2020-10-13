@@ -100,7 +100,6 @@
                     </div>
                 </div>
                 @include('store::partials.sidebar')
-                @unset($product)
             </div>
         </div>
     </div>
